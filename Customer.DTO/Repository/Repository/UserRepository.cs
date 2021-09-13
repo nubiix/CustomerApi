@@ -24,12 +24,16 @@ namespace Customer.DTO.Repository.Repository
             return _db.User.Where(user => user.Id == id).ToList();
         }
 
-        public int CreateNewCustomer(User user)
+        public User CreateNewCustomer(User user)
         {
             _db.Add(user);
-            return _db.SaveChanges();
+            if (_db.SaveChanges() == 0)
+            {
+                return null;
+            }
+            return user;
         }
-        public int UpdateCustomer(User userToUpdate)
+        public User UpdateCustomer(User userToUpdate)
         {
             var user = _db.User.Where(user => user.Id == userToUpdate.Id).FirstOrDefault();
             if (user != null)
@@ -40,22 +44,34 @@ namespace Customer.DTO.Repository.Repository
                 user.Surname = userToUpdate.Surname;
                 user.UserLastModified = userToUpdate.UserLastModified;
             }
-            return _db.SaveChanges();
+            if (_db.SaveChanges() == 0)
+            {
+                return null;
+            }
+            return user;
         }
-        public int RemoveCustomer(string id, Roles role)
+        public User RemoveCustomer(string id, Roles role)
         {
             var user = _db.User.Where(user => user.Id == id && user.Role == role).FirstOrDefault();
             _db.Remove(user);
-            return _db.SaveChanges();
+            if (_db.SaveChanges() == 0)
+            {
+                return null;
+            }
+            return user;
         }
-        public int SetAdmin(string id)
+        public User SetAdmin(string id)
         {
             var user = _db.User.Where(user => user.Id == id).FirstOrDefault();
             if (user != null)
             {
                 user.Role = Roles.Admin;
             }
-            return _db.SaveChanges();
+            if (_db.SaveChanges() == 0)
+            {
+                return null;
+            }
+            return user;            
         }
     }
 }
