@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Customer.DTO.Models.Constants
+﻿namespace Customer.DTO.Models.Constants
 {
     public static class TokenConstants
     {

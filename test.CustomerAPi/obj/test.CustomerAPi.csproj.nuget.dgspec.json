@@ -4,14 +4,14 @@
     "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\test.CustomerAPi\\test.CustomerAPi.csproj": {}
   },
   "projects": {
-    "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\test.CustomerAPi\\test.CustomerAPi.csproj": {
+    "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\Customer.DTO\\Customer.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\test.CustomerAPi\\test.CustomerAPi.csproj",
-        "projectName": "test.CustomerAPi",
-        "projectPath": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\test.CustomerAPi\\test.CustomerAPi.csproj",
+        "projectUniqueName": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\Customer.DTO\\Customer.DTO.csproj",
+        "projectName": "Customer.DTO",
+        "projectPath": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\Customer.DTO\\Customer.DTO.csproj",
         "packagesPath": "C:\\Users\\romel\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\test.CustomerAPi\\obj\\",
+        "outputPath": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\Customer.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -43,9 +43,200 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\CustomerAPi\\CustomerAPi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\CustomerAPi\\CustomerAPi.csproj",
+        "projectName": "CustomerAPi",
+        "projectPath": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\CustomerAPi\\CustomerAPi.csproj",
+        "packagesPath": "C:\\Users\\romel\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\CustomerAPi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\romel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\Customer.DTO\\Customer.DTO.csproj": {
+                "projectPath": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\Customer.DTO\\Customer.DTO.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "IdentityModel": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "IdentityServer4": {
+              "target": "Package",
+              "version": "[4.1.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\test.CustomerAPi\\test.CustomerAPi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\test.CustomerAPi\\test.CustomerAPi.csproj",
+        "projectName": "test.CustomerAPi",
+        "projectPath": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\test.CustomerAPi\\test.CustomerAPi.csproj",
+        "packagesPath": "C:\\Users\\romel\\.nuget\\packages\\",
+        "outputPath": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\test.CustomerAPi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\romel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\CustomerAPi\\CustomerAPi.csproj": {
+                "projectPath": "D:\\Proyectos\\CustomerAPi\\CustomerAPi\\CustomerAPi\\CustomerAPi.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
             },
             "NUnit": {
               "target": "Package",
@@ -73,6 +264,9 @@
             }
           ],
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

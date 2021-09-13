@@ -2,11 +2,8 @@
 using Customer.DTO.Models.Constants;
 using Customer.DTO.Models.EFModels;
 using Customer.DTO.Repository.Repository.Interface;
-using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Customer.DTO.Repository.Repository
 {

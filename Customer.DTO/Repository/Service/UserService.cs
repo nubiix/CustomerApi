@@ -2,9 +2,7 @@
 using Customer.DTO.Models.Constants;
 using Customer.DTO.Repository.Repository.Interface;
 using Customer.DTO.Repository.Service.Interface;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Customer.DTO.Repository.Service
 {

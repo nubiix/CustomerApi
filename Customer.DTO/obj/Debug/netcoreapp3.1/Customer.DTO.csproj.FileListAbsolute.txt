@@ -7,7 +7,6 @@ D:\Proyectos\CustomerAPi\Customer.DTO\bin\Debug\netcoreapp3.1\Customer.DTO.pdb
 D:\Proyectos\CustomerAPi\Customer.DTO\obj\Debug\netcoreapp3.1\Customer.DTO.dll
 D:\Proyectos\CustomerAPi\Customer.DTO\obj\Debug\netcoreapp3.1\Customer.DTO.pdb
 D:\Proyectos\CustomerAPi\Customer.DTO\obj\Debug\netcoreapp3.1\Customer.DTO.csproj.CoreCompileInputs.cache
-D:\Proyectos\CustomerAPi\CustomerAPi\Customer.DTO\obj\Debug\netcoreapp3.1\Customer.DTO.csprojAssemblyReference.cache
 D:\Proyectos\CustomerAPi\CustomerAPi\Customer.DTO\obj\Debug\netcoreapp3.1\Customer.DTO.AssemblyInfoInputs.cache
 D:\Proyectos\CustomerAPi\CustomerAPi\Customer.DTO\obj\Debug\netcoreapp3.1\Customer.DTO.AssemblyInfo.cs
 D:\Proyectos\CustomerAPi\CustomerAPi\Customer.DTO\obj\Debug\netcoreapp3.1\Customer.DTO.dll

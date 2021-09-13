@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using Customer.DTO.Models;
 using Customer.DTO.Models.Constants;
 using Customer.DTO.Repository.Service.Interface;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace CustomerAPi.Controllers
 {
@@ -20,20 +15,20 @@ namespace CustomerAPi.Controllers
         public AdminController(IUserService userService)
         {
             _userService = userService;
-        }      
+        }
+
         [HttpGet]
         public IActionResult GetUsers()
         {
             try
             {
                 var result = _userService.GetUsers(Roles.User);
-                if (result != null)
+                if (result != null && result.Any())
                 {
                     return Ok(result);
                 }
                 else
                 {
-                    //TODO
                     return NotFound(result);
                 }
             }
@@ -42,27 +37,26 @@ namespace CustomerAPi.Controllers
                 return StatusCode(500,e);
             }
         }        
-        [HttpGet]
-        public IActionResult CreateNewUser([FromQuery] string name, [FromQuery] string surname, [FromQuery] string photoBase64, [FromQuery] string user)
+        [HttpPost]
+        public IActionResult CreateNewUser([FromBody] UserRequest user)
         {
             try
             {
-                var result = _userService.CreateNewCustomer(new Customer.DTO.Models.User()
+                var result = _userService.CreateNewCustomer(new User()
                 {
-                    Name = name,
-                    Surname = surname,
-                    PhotoBase64 = photoBase64,
+                    Name = user.Name,
+                    Surname = user.Surname,
+                    PhotoBase64 = user.PhotoBase64,
                     Role = Customer.DTO.Models.Constants.Roles.User,
-                    UserCreator = user,
-                    UserLastModified = user
+                    UserCreator = user.User,
+                    UserLastModified = user.User
                 });
-                if (result != 0)
+                if (result != null)
                 {
                     return Ok(result);
                 }
                 else
                 {
-                    //TODO
                     return NotFound(result);
                 }
             }
@@ -71,27 +65,26 @@ namespace CustomerAPi.Controllers
                 return StatusCode(500,e);
             }
         }
-        [HttpGet]
-        public IActionResult UpdateUser([FromQuery] string name, [FromQuery] string surname, [FromQuery] string photoBase64, [FromQuery] string user)
+        [HttpPut]
+        public IActionResult UpdateUser([FromBody] UserRequest user)
         {
             try
             {
-                var result = _userService.UpdateCustomer(new Customer.DTO.Models.User()
+                var result = _userService.UpdateCustomer(new User()
                 {
-                    Name = name,
-                    Surname = surname,
-                    PhotoBase64 = photoBase64,
+                    Name = user.Name,
+                    Surname = user.Surname,
+                    PhotoBase64 = user.PhotoBase64,
                     Role = Customer.DTO.Models.Constants.Roles.User,
-                    UserCreator = user,
-                    UserLastModified = user
+                    UserCreator = user.User,
+                    UserLastModified = user.User
                 });
-                if (result != 0)
+                if (result != null)
                 {
                     return Ok(result);
                 }
                 else
                 {
-                    //TODO
                     return NotFound(result);
                 }
             }
@@ -100,19 +93,18 @@ namespace CustomerAPi.Controllers
                 return StatusCode(500,e);
             }
         }
-        [HttpGet("{id}")]
-        public IActionResult RemoveCustomer(string id)
+        [HttpDelete("{id}")]
+        public IActionResult RemoveUser(string id)
         {
             try
             {
                 var result = _userService.RemoveCustomer(id, Roles.User);
-                if (result != 0)
+                if (result != null)
                 {
                     return Ok(result);
                 }
                 else
                 {
-                    //TODO
                     return NotFound(result);
                 }
             }
@@ -122,20 +114,18 @@ namespace CustomerAPi.Controllers
             }
         }
 
-        [HttpGet("{id}")]
-        // GET: UserController/Delete/5
+        [HttpPatch("{id}")]
         public IActionResult SetAdmin(string id)
         {
             try
             {
                 var result = _userService.SetAdmin(id);
-                if (result != 0)
+                if (result != null)
                 {
                     return Ok(result);
                 }
                 else
                 {
-                    //TODO
                     return NotFound(result);
                 }
             }

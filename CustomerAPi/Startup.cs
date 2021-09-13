@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Customer.DTO.Models.EFModels;
 using Customer.DTO.Repository.Repository;
@@ -7,12 +6,9 @@ using Customer.DTO.Repository.Service;
 using Customer.DTO.Repository.Service.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
@@ -50,6 +46,7 @@ namespace CustomerAPi
                 {
                     policy.RequireAuthenticatedUser();
                     policy.RequireClaim("scope", "api1");
+
                 });
             });
             services.AddControllers();
@@ -111,8 +108,7 @@ namespace CustomerAPi
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers()
-                                .RequireAuthorization("ApiScope");
+                endpoints.MapControllers().RequireAuthorization("ApiScope");
             });
 
             
