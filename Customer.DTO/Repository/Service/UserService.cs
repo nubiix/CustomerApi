@@ -23,21 +23,21 @@ namespace Customer.DTO.Repository.Service
         {
             return _userRepository.GetCustomerInfoById(id); 
         }
-        public int CreateNewCustomer(User user) 
+        public User CreateNewCustomer(User user) 
         {
             return _userRepository.CreateNewCustomer(user);
         }
         
-        public int UpdateCustomer(User userToUpdate)
+        public User UpdateCustomer(User userToUpdate)
         {
             return _userRepository.UpdateCustomer(userToUpdate);
         }
-        public int RemoveCustomer(string id, Roles role)
+        public User RemoveCustomer(string id, Roles role)
         {
             return _userRepository.RemoveCustomer(id,role);
         }
 
-        public int SetAdmin(string id)
+        public User SetAdmin(string id)
         {
             return _userRepository.SetAdmin(id);
         }

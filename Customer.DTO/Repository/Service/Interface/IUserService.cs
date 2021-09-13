@@ -10,9 +10,9 @@ namespace Customer.DTO.Repository.Service.Interface
     {
         List<User> GetUsers(Roles rol);
         List<User> GetCustomerInfoById(string id);
-        int CreateNewCustomer(User user);
-        int UpdateCustomer(User userToUpdate);
-        int RemoveCustomer(string id, Roles role);
-        int SetAdmin(string id);
+        User CreateNewCustomer(User user);
+        User UpdateCustomer(User userToUpdate);
+        User RemoveCustomer(string id, Roles role);
+        User SetAdmin(string id);
     }
 }

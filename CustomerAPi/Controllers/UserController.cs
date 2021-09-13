@@ -109,7 +109,7 @@ namespace CustomerAPi.Controllers
                     UserCreator = user.User,
                     UserLastModified = user.User
                 });
-                if (result != null && result.Any())
+                if (result != null)
                 {
                     return Ok(result);
                 }
@@ -137,7 +137,7 @@ namespace CustomerAPi.Controllers
                     UserCreator = user.User,
                     UserLastModified = user.User
                 });
-                if (result != null && result.Any())
+                if (result != null)
                 {
                     return Ok(result);
                 }
@@ -157,7 +157,7 @@ namespace CustomerAPi.Controllers
             try
             {
                 var result = _userService.RemoveCustomer(id, Roles.Customer);
-                if (result != null && result.Any())
+                if (result != null)
                 {
                     return Ok(result);
                 }
